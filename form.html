@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,14 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Cadastr</title>
 </head>
+
 <body>
     <header class="cabecalho">
         <img id="logo" src="img/logoNovoTec.svg" alt="logoNovoTec">
         <nav class="cabecalho-menu">
             <ul>
-                <li class="cabecalho-menu-lista"><a href="/img\ladingpage/index.html" class="cabecalho-menu-item">Home</a></li>
+                <li class="cabecalho-menu-lista"><a href="/img\ladingpage/index.html"
+                        class="cabecalho-menu-item">Home</a></li>
                 <li class="cabecalho-menu-lista"><a cabecalho-menu-item>Tutorial</a></li>
                 <li class="cabecalho-menu-lista"><a cabecalho-menu-item>Open source</a></li>
                 <li class="cabecalho-menu-lista"><a cabecalho-menu-item>Comandos</a></li>
@@ -21,7 +24,92 @@
     </header>
     <div>
         <h1 id="titulo">Faça o seu cadrasto aqui!</h1>
+        <h2 class="subtitulo">Insira as suas informações aqui</h2>
     </div>
-    
+    <form>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome</strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+        </fieldset>
+        <div class="campo">
+            <label for="email">
+                <strong>Email</strong>
+            </label>
+            <input type="text" name="email" id="email" placeholder="nome@exemplo.com">
+        </div>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="senha">
+                    <strong>Digite a suua senha</strong>
+                </label>
+                <input type="password" name="senha" id="senha">
+            </div>
+        </fieldset>
+        <div class="campo">
+            <label>
+                <strong>Qual a sua especialidade?</strong>
+            </label>
+            <label>
+                <input type="radio" name="dev" value="frontend">FrontEnd
+            </label>
+            <label>
+                <input type="radio" name="dev" value="backend">BackEnd
+            </label>
+            <label>
+                <input type="radio" name="dev" value="fullstack">Fullstack
+            </label>
+        </div>
+        <div class="campo">
+            <label for="senioridade">
+                <strong>Senioridade</strong>
+            </label>
+            <select id="senioridade" required>
+                <option selected disabled value="">Selecione</option>
+                <option>Junior</option>
+                <option>Pleno</option>
+                <option>Senior</option>
+            </select>
+        </div>
+        <fieldset class="grupo">
+            <div id="check">
+                <label><strong>Selecione as tecnologias que utiliza:</strong></label><br><br>
+                <input type="checkbox" name="tecnologial" id="tecnologial1" value="HTML">
+                <label for="tecnologial1">HTML</label>
+                <input type="checkbox" name="tecnologial" id="tecnologial2" value="CSS">
+                <label for="tecnologial2">CSS</label>
+                <input type="checkbox" name="tecnologial" id="tecnologial3" value="JavaScript">
+                <label for="tecnologial3">JavaScript</label>
+                <input type="checkbox" name="tecnologial" id="tecnologial4" value="Java">
+                <label for="tecnologial4">Java</label>
+                <input type="checkbox" name="tecnologial" id="tecnologial5" value="PHP">
+                <label for="tecnologial5">PHP</label>
+                <input type="checkbox" name="tecnologial" id="tecnologial6" value="Python">
+                <label for="tecnologial6">Python</label>
+                <input type="checkbox" name="tecnologial" id="tecnologial7" value="Go">
+                <label for="tecnologial7">Go</label>
+            </div>
+        </fieldset>
+        <div class="campo">
+            <br>
+            <label for="experiencia">
+                <strong>Conte nos um pouco mais sobre suas experiências:</strong>
+            </label>
+            <textarea name="experiencia" id="experiencia" cols="40" rows="6"></textarea>
+        </div>
+        <div class="campo">
+            <label for="arquivo">
+                <strong>Escolha uma foto</strong>
+            </label>
+            <input type="file" name="arquivo" id="arquivo">
+        </div>
+        <button class="btn" type="submit" onsubmit="">Enviar</button>
+    </form>
+
 </body>
 </html>
